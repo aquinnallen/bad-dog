@@ -1,6 +1,41 @@
 header{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
+    text-align: center;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
     
     
 }
+
+body{
+    background: linear-gradient(135deg, #33ccff, #cc66ff);
+    height: 100vh;
+    margin: 0;
+    color: #fff; /* white text color on colorful background */
+}
+
+form {
+    margin: 20px;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+input[type="file"] {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+}
+
