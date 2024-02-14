@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <h2>Feedback/Survey Form</h2>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+   </nav> 
+
+<form id="feedbackForm">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+
+<div id="successMessage" style="display: none;">
+    <p>Thank you for your feedback!</p>
+</div>
+
+<script src ="feedback.js" ></script>
+</body>
+</html>

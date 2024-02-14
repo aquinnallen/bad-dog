@@ -6,16 +6,26 @@
     <title>Upload Audio Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<header>Welcome to Operation Bad Dog!</header>
 <body>
-    
+    <h1>Welcome to Operation Bad Dog</h1>
+   <nav class="navbar">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+   </nav> 
+
 <h2>Upload Audio File Here</h2>
 <form id="uploadForm" enctype="multipart/form-data">
     <input type="file" id="audioFile" name="audioFile" accept="audio/*">
     <button type="button" onclick="uploadFile()">Upload</button>
 </form>
-
     <div id="uploadStatus"></div>
-    
+
+    <div id ="moving-box">Hello</div>
+            
+    <script src="script.js"></script>
 </body>
 </html>
