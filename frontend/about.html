@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>About the Project</h1>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+        </ul>
+   </nav> 
+
+    <p>Purpose: analyzing sentiment from speech using combined analysis of speech-to-text -> sentiment analysis and recording -> emotion analysis 
+    </p>
+
+    <p>Tools we will use: speechbrain model https://huggingface.co/speechbrain/emotion-recognition-wav2vec2-IEMOCAP
+        oracle text-to-speech
+        oracle sentiment analysis API
+        LLM to give final digest of combined analysis of file
+    </p>
+
+    <p>
+        MVP: User uploads an audio file to our website, our backend accumulates all the info on the file and assembles a response. Maybe add a sweet graph?
+    </p>
+</body>
+</html>

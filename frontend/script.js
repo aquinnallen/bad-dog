@@ -46,4 +46,5 @@ function displayUploadStatus(message, type) {
     var uploadStatus = document.getElementById('uploadStatus');
     uploadStatus.textContent = message;
     uploadStatus.className = type;
+
 }

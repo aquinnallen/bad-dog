@@ -1,4 +1,4 @@
-header{
+h1{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
     text-align: center;
@@ -9,10 +9,35 @@ header{
     
 }
 
+.navbar ul{
+    list-style-type: none;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: rgb(103, 103, 103);
+}
+
+.navbar li{
+    float: left;
+}
+
 body{
-    background: linear-gradient(135deg, #33ccff, #cc66ff);
+    background: linear-gradient(135deg, #33ccff, #cc66ff, yellow);
     height: 100vh;
-    margin: 0;
+    margin: 0px;
     color: #fff; /* white text color on colorful background */
 }
 
@@ -39,3 +64,23 @@ input[type="file"] {
     width: 100%;
 }
 
+
+#moving-box{
+    width: 500px;
+    height: 250px;
+    background: #6d6d6d;
+    font-size: 225px;
+    text-align: center;
+
+    animation: 5s linear 0s infinite running box;
+}
+
+@keyframes box{
+    from{margin-left: 100%;}
+    to{margin-left: 0%;}
+}
+    
+    
+
+
+    
