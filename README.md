@@ -14,8 +14,8 @@ Maybe add a sweet graph?
 installation / documentation / notes (basically just a list of things we did)):
 
 installed flask and speechbrain with pip. 
-	* pip install soundfile. This fixes some weird thing in torch. 
-	* Earlier torch versions dont have this problem but 2.2.0 and further have this issue. For some reason.
-	* The speech brains pretrained module we are using comes to a diffinitive decision between "Happy, angry, sad and neutral" and sadly doesn't give us the weighting values.
+  * pip install soundfile. This fixes some weird thing in torch. 
+  * Earlier torch versions dont have this problem but 2.2.0 and further have this issue. For some reason.
+  * The speech brains pretrained module we are using comes to a diffinitive decision between "Happy, angry, sad and neutral" and sadly doesn't give us the weighting values.
 
 	
