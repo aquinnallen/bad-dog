@@ -2,11 +2,16 @@ async function uploadFile() {
     document.getElementById("results-box").innerHTML = ""
     var fileInput = document.getElementById('audioFile');
     var file = fileInput.files[0];
-    
+    var fileExtension = file.name.slice(-4)
+    console.log(fileExtension)
     // Check if a file is selected
     if (!file) {
         displayUploadStatus('Please select a file to upload', 'error');
         return;
+    }
+    if (!fileExtension.startsWith('.wav')){
+       displayUploadStatus('Please select a .wav file', 'error');
+       return;
     }
 
     // Check if the selected file is an audio file
@@ -14,7 +19,7 @@ async function uploadFile() {
         displayUploadStatus('Please select an audio file', 'error');
         return;
     }
-
+    console.log(file.name.length)
     // Display loading indicator
     displayUploadStatus('Uploading...', 'info');
 
