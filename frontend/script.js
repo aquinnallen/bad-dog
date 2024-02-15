@@ -1,5 +1,5 @@
-
-function uploadFile() {
+async function uploadFile() {
+    document.getElementById("results-box").innerHTML = ""
     var fileInput = document.getElementById('audioFile');
     var file = fileInput.files[0];
     
@@ -23,7 +23,7 @@ function uploadFile() {
     formData.append('audioFile', file);
 
     // Use Fetch API to send file data to the server
-    fetch('the URL of your server side script that handles the file upload process', {
+    let newDiv = await fetch('http://192.9.248.32:5000/upload_audio_file', {
         method: 'POST',
         body: formData
     })
@@ -31,6 +31,7 @@ function uploadFile() {
         if (response.ok) {
             // Handle successful upload
             displayUploadStatus('File uploaded successfully', 'success');
+            return response.json()
         } else {
             // Handle upload error
             displayUploadStatus('Error uploading file', 'error');
@@ -40,6 +41,9 @@ function uploadFile() {
         console.error('Error:', error);
         displayUploadStatus('Error: ' + error.message, 'error');
     });
+    console.log(newDiv)
+    document.getElementById("results-box").appendChild(displayReturn(newDiv))
+
 }
 
 function displayUploadStatus(message, type) {
@@ -47,4 +51,37 @@ function displayUploadStatus(message, type) {
     uploadStatus.textContent = message;
     uploadStatus.className = type;
 
+}
+
+function displayReturn(jsonObj) {
+ // Create a new <div> element
+    var div = document.createElement("div");
+    div.classList.add("json-container");
+
+    // Iterate through each key-value pair in the JSON object
+    for (var key in jsonObj) {
+        if (jsonObj.hasOwnProperty(key)) {
+            // Create a <div> for the key
+            var keyDiv = document.createElement("div");
+            keyDiv.classList.add("json-key"); 
+            keyDiv.textContent = key + ":";
+
+            // Create a <div> for the value
+            var valueDiv = document.createElement("div");
+            valueDiv.classList.add("json-value");
+            if (typeof jsonObj[key] === "object") {
+                // If the value is an object, recursively call displayJSON
+                valueDiv.appendChild(displayReturn(jsonObj[key]));
+            } else {
+                valueDiv.textContent = jsonObj[key];
+            }
+
+            // Append key and value <div>s to the main <div>
+            div.appendChild(keyDiv);
+            div.appendChild(valueDiv);
+        }
+    }
+
+    // Return the created <div> element
+    return div;
 }
