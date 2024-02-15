@@ -55,8 +55,3 @@ def get_sentiment(transcript,api_key):
 
 
 
-if __name__ == '__main__':
-  key = "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"
-  query = {"text_analysis":{"sadness":"21%","empathy":"20%","confusion":"10%","anger":"7%","arousal":"7%"},"vocal_tone_analysis":"happy"}
-  print(query)
-  get_analysis(query,key)
