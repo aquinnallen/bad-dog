@@ -1,6 +1,12 @@
 <h1>BAD DOG!(they said sweetly)</h1>
 This project is a collaboration between four students from The Evergreen State College for the purpose of entering into the Major Leauge Hacking Global Hack Week AI/ML Challenge from 2/9/24-2/15/24.
 
+We are:
+Dominic Severe - https://github.com/abyssalremark
+Torsten Spieler - https://github.com/EvergreenTor
+Devin Eason - https://github.com/de02E
+Quinn Allen - https://github.com/aquinnallen
+
 We began work on this project at the beginning of the week-long hack.
 
 None of us had previous experience using trained AI/ML models in our software projects, so we certainly learned a lot!
