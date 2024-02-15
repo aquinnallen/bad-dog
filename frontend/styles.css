@@ -9,6 +9,20 @@ h1{
     
 }
 
+#uploadStatus{
+    margin-bottom: 2rem;
+    animation: 4s ease-in-out;
+}
+
+.json-key {
+    font-size:large;
+    color: black;
+    
+}
+.json-value {
+    margin-bottom: 1rem;
+}
+
 .navbar ul{
     list-style-type: none;
     background-color: black;
@@ -76,11 +90,6 @@ input[type="file"] {
 }
 
 @keyframes box{
-    from{margin-left: 100%;}
+    from{margin-left: 69%;}
     to{margin-left: 0%;}
 }
-    
-    
-
-
-    
